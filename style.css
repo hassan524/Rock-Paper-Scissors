@@ -1,109 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    scrollbar-width: none;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-nav {
-    background: rgb(5, 5, 75);
-    color: white;
-    text-align: center;
-    height: 15vh;
-    font-size: 1.8rem;
+.custom-font {
+  font-family: "Dancing Script", cursive;
 }
 
-nav h2 {
-    animation: font 3s ease infinite alternate;
-    line-height: 16vh;
+.main {
+  height: 100vh;
+  background: rgb(255, 205, 213);
 }
 
-@keyframes font {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.1);
-    }
+.convertor {
+  padding: 1rem; 
+  max-width: 400px; 
+  width: 100%; 
+  margin: 2rem;
+  border-radius: 10px;
+}
+.input-form input {
+  border: 1px solid rgba(133, 27, 101, 0.5);
+  padding: 0.5rem;
+  border-radius: 25px;
+  outline: none;
+  caret-color: pink;
 }
 
-.con-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cur-btn {
+  border: none;
+  background: rgb(255, 205, 213);
+  padding: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
 }
-
-.row1 {
-    gap: 2rem;
+.cur-btn:active {
+  transform: scale(0.96);
 }
-
-.con-row img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover;
-    transition: all 0.2s ease;
+.cur {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
 }
-
-.image {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+.drop-down {
+  border: 1px solid pink;
+  padding: 0px 8px 0 8px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-
-.image:hover {
-    border: 5px solid rgb(5, 5, 75);
+.drop-down select {
+  border: none;
+  padding: 5px;
 }
-.image:active{
-    transform: scale(0.95);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 15vh);
-    gap: 3rem;
-}
-.row2{
-    gap: 3rem;
-}
-.row3{
-    justify-content: space-evenly;
-    gap: 2rem;
-}
-.choice p{
-    font-size: 2rem;
-}
-.choice{
-    position: relative;
-    cursor: pointer;
-}
-.choice :nth-child(1){
-    font-size: 3rem;
-}
-.choice::before{
-    content: '';
-    position: absolute;
-    background: black;
-    height: 2px;
-    width: 100%;
-    bottom: -4px;
-    left: 0;
-    
-}
-.msg{
-    background: rgb(5, 5, 75);
-    color: #fff;
-    padding: 23px;
-    font-size: 1.8rem;
-    border-radius: 25px;
-    cursor: pointer;
-}
-.msg:active{
-    transform: scale(0.96);
+.drop-down img {
+  max-width: 3rem;
 }
